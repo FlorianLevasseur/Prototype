@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.case {
+    width: 15vw;
+    height: 15vw;
+}
