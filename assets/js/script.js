@@ -1,6 +1,7 @@
 if (document.getElementById("scan") != null) {
     document.getElementById("scan").addEventListener("click", () => {
-        window.location.href = "views/card.html";
+        document.getElementById("scan").setAttribute("hidden", "");
+        qrScanner.start();
     })
 } else {
     let firstLine = "";
