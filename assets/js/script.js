@@ -3,7 +3,7 @@ if (document.getElementById("scan") != null) {
         document.getElementById("scan").setAttribute("hidden", "");
         qrScanner.start();
     })
-} else {
+} else if (document.getElementById("content") != null) {
     let firstLine = "";
     let secondLine = "";
 
@@ -30,6 +30,28 @@ if (document.getElementById("scan") != null) {
         </div>
         <div class="text-center" id="reinit"></div>
         <div class="text-center" id="return"><button class="btn btn-info text-white mt-3">Retour</button></div>`
+} else if (document.getElementById("myCard") != null) {
+    let firstLine = "";
+    let secondLine = "";
+
+    for (let i = 1; i <= 5; i++) {
+        firstLine += `<button class="btn col-2 mt-5 mb-3 case bg-white rounded" id="mycase${i}"><i class="bi bi-check2-square text-success fs-1"></i></button>`
+    }
+    for (let i = 6; i <= 10; i++) {
+        secondLine += `<button class="btn col-2 mb-3 case bg-white rounded" id="case${i}"></button>`
+    }
+    document.getElementById("myCard").innerHTML = `
+        <div class="row m-0 p-0">
+            <div class="bg-warning rounded">
+                <div class="row justify-content-evenly">
+                    ${firstLine}
+                </div>
+                <div class="row justify-content-evenly">
+                    ${secondLine}
+                </div>
+            </div>
+        </div>
+        <div class="text-center" id="reinit"></div>`
 }
 if (document.getElementById("case1") != null) {
     document.getElementById("case1").addEventListener("click", () => {
