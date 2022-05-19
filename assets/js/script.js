@@ -2,8 +2,7 @@ if (document.getElementById("scan") != null) {
     document.getElementById("scan").addEventListener("click", () => {
         window.location.href = "views/card.html";
     })
-}
-if (window.location.href == "http://127.0.0.1:5500/views/card.html") {
+} else {
     let firstLine = "";
     let secondLine = "";
 
